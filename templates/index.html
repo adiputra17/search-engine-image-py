@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>EEPIS-FIRE Search Engine (Image)</title>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    function validateForm() {
+        var x = document.forms["myForm"]["keyword"].value;
+        if (x == "") {
+            alert("Silahkan masukkan teksnya!");
+            return false;
+        }
+    }
+    </script>
+
+    <style type="text/css">
+        .round{
+            border-radius: 30px;
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+ 
+    <div class="container">
+        <br><br>
+
+        <div class="row">
+            <center>
+                <h1>MY LOGO</h1>
+            </center>
+        </div>
+ 
+        <div class="row" style="margin-top: 50px">
+            <center>
+                <form name="myForm" onsubmit="return validateForm()" action="search" method="post">
+                    <input type="text" class="form-control round" id="keyword" name="keyword" value="flag" style="width: 500px"><br>
+                    <button type="submit" class="btn btn-success round">Search</button>
+                </form>
+            </center>  
+        </div>
+ 
+        <footer class="footer" style="margin-top: 50px">
+            <p align="center">&copy; EEPIS-FIRE 2018</p>
+        </footer>
+ 
+    </div>
+
+</body>
+ 
+</html>
+
+
+<!-- <div class="jumbotron" 
+            style=" background-color:#76deef;">
+            <h1>EEPIS-FIRE Search Engine (Image)</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Nama Kelompok</th>
+                            <th>NRP</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Adi Putra Utama</td>
+                            <td>2110151034</td>
+                          </tr>
+                          <tr>
+                            <td>Maulana Rahmatullah</td>
+                            <td>2110151040</td>
+                          </tr>
+                          <tr>
+                            <td>Adhisma Azahra Sidinanda</td>
+                            <td>2110151041</td>
+                          </tr>
+                          <tr>
+                            <td>Ma'arif</td>
+                            <td>2110151046</td>
+                          </tr>
+                          <tr>
+                            <td>Karina Faradila Hapsari</td>
+                            <td>2110151045</td>
+                          </tr>
+                        </tbody>
+                    </table>  
+                </div>
+            </div>
+        </div> -->

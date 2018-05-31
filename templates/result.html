@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>EEPIS-FIRE Search Engine (Image)</title>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+    function validateForm() {
+        var x = document.forms["myForm"]["cluster"].value;
+        if (x == "") {
+            alert("Silahkan masukkan teksnya!");
+            return false;
+        }
+    }
+    </script>
+
+    <style type="text/css">
+        .round{
+            border-radius: 30px;
+        }
+        .header{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            background-color: #eee;
+        }
+        .header2{
+            padding-top: 5px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            background-color: #eee;
+        }
+        .body-content{
+            padding: 10px 20px 10px 25px;
+        }
+    </style>
+ 
+</head>
+ 
+<body>
+
+    <div class="row header">
+        <div class="col-md-2">
+           <!--  <h2>MY LOGO</h2> -->
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline" name="myForm" onsubmit="return validateForm()" action="search" method="post">
+                <input type="text" class="form-control round" id="keyword" name="keyword" value="{{ keyword }}" style="width: 500px">
+                <button type="submit" class="btn btn-success round">Search</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+
+    <div class="row header2">
+        <div class="col-md-2">
+           <!--  <h2>MY LOGO</h2> -->
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-sm btn-light round">All</button>
+            <button type="button" class="btn btn-sm btn-info round">Images</button>
+            <button type="button" class="btn btn-sm btn-light round">News</button>
+            <button type="button" class="btn btn-sm btn-light round">More</button>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+
+    <div class="row body-content">
+        <!-- {{ sum_data }}
+        {{ data[0] }} -->
+        {% for url in data %}
+            <img src="{{ url }}" height="100px" style="margin-right: 5px">
+        {% endfor %}
+    </div>
+ 
+    <!-- <div class="container">
+
+        <div class="row">
+            <center>
+                <h1>MY LOGO</h1>
+            </center>
+        </div>
+ 
+        <div class="row" style="margin-top: 50px">
+            <center>
+                <form name="myForm" onsubmit="return validateForm()" action="search" method="post" target="_blank">
+                    <input type="text" class="form-control round" id="cluster" name="cluster" style="width: 500px"><br>
+                    <button type="submit" class="btn btn-success round">Search</button>
+                </form>
+            </center>  
+        </div>
+ 
+        <footer class="footer" style="margin-top: 50px">
+            <p align="center">&copy; EEPIS-FIRE 2018</p>
+        </footer>
+ 
+    </div> -->
+
+</body>
+ 
+</html>
