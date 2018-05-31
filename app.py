@@ -32,8 +32,8 @@ def search():
     elif request.method =='POST':
         keyword = request.form['keyword']
 
-        # cursor.execute("SELECT url image_data WHERE id=(SELECT DISTINCT id_image_data FROM keyword_image WHERE keyword='keyword')")
-        cursor.execute("SELECT url FROM image_data")
+        # cursor.execute("SELECT DISTINCT id_image_data FROM keyword_image WHERE keyword LIKE '%"+keyword+"%'")
+        cursor.execute("SELECT url FROM image_data WHERE id IN (SELECT DISTINCT id_image_data FROM keyword_image WHERE keyword LIKE '%["+keyword+"]%')")
         # data = cursor.fetchall()
 
         data = [item[0] for item in cursor.fetchall()]

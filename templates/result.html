@@ -37,7 +37,15 @@
             background-color: #eee;
         }
         .body-content{
-            padding: 10px 20px 10px 25px;
+            padding: 0px 20px 10px 25px;
+        }
+        .image-flag{
+            margin-top: 10px
+        }
+        .not-found{
+            margin-top: 60px;
+            font-size: 30pt;
+            color: #5bc0de;
         }
     </style>
  
@@ -76,35 +84,17 @@
     </div>
 
     <div class="row body-content">
-        <!-- {{ sum_data }}
-        {{ data[0] }} -->
-        {% for url in data %}
-            <img src="{{ url }}" height="100px" style="margin-right: 5px">
-        {% endfor %}
-    </div>
- 
-    <!-- <div class="container">
-
-        <div class="row">
+        {% if data == [] %}
             <center>
-                <h1>MY LOGO</h1>
+                <div class="not-found">404 Not Found!</div>
+                <div><img src="images/wind.png" width="150px" height="150px"></div>
             </center>
-        </div>
- 
-        <div class="row" style="margin-top: 50px">
-            <center>
-                <form name="myForm" onsubmit="return validateForm()" action="search" method="post" target="_blank">
-                    <input type="text" class="form-control round" id="cluster" name="cluster" style="width: 500px"><br>
-                    <button type="submit" class="btn btn-success round">Search</button>
-                </form>
-            </center>  
-        </div>
- 
-        <footer class="footer" style="margin-top: 50px">
-            <p align="center">&copy; EEPIS-FIRE 2018</p>
-        </footer>
- 
-    </div> -->
+        {% else %}
+            {% for url in data %}
+                <img class="image-flag" src="{{ url }}" height="100px" style="margin-right: 5px">
+            {% endfor %}
+        {% endif %}
+    </div>
 
 </body>
  
