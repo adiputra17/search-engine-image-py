@@ -32,7 +32,7 @@
         }
         .header2{
             padding-top: 5px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             padding-left: 10px;
             background-color: #ddd;
         }
@@ -96,7 +96,7 @@
         {% else %}
             {% for url in data %}
                 <!-- <form action="search" method="post"> -->
-                    <a href="http://127.0.0.1:5000/compare?original={{ url }}">
+                    <a href="http://127.0.0.1:5000/compare-histogram?original={{ url }}">
                         <img class="image-flag" src="../images/{{ url }}" height="100px" style="margin-right: 5px">
                     </a>
                     <!-- <input type="hidden" name="original" value="{{ url }}"> -->
