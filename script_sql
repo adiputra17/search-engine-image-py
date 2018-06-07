@@ -177,3 +177,14 @@ VALUES
     (NULL, '179', 'pemandangan-alam'),
     (NULL, '180', 'pemandangan-alam'),
     (NULL, '181', 'pemandangan-alam')
+
+
+INSERT INTO `image_data`
+    (`url`) 
+VALUES 
+    ('winter6.jpg'),
+    ('winter7.jpg'),
+    ('winter8.jpg'),
+    ('laut5.jpg'),
+    ('laut6.jpg'),
+    ('laut7.jpg')
